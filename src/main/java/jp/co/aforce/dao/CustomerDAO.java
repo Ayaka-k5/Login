@@ -16,8 +16,8 @@ public class CustomerDAO extends DAO {
 		PreparedStatement st;
 		st = con.prepareStatement(
 				"select * from login where username=? and password=?");
-		st.setString(1, 'username');
-		st.setString(2, 'password');
+		st.setString(1, username);
+		st.setString(2, password);
 		ResultSet rs = st.executeQuery();
 
 		while (rs.next()) {
